@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D5EBCBAE-AB8C-40A6-956A-765FD4C0B3C3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClassLibrary</RootNamespace>
+    <AssemblyName>ClassLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DomainContext.cs" />
+    <Compile Include="DomainModelMap.cs" />
+    <Compile Include="DomainModels.cs" />
+    <Compile Include="Migrations\201701222047176_OnetoMany.cs" />
+    <Compile Include="Migrations\201701222047176_OnetoMany.Designer.cs">
+      <DependentUpon>201701222047176_OnetoMany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701222049219_OnetoManyRemoveCol.cs" />
+    <Compile Include="Migrations\201701222049219_OnetoManyRemoveCol.Designer.cs">
+      <DependentUpon>201701222049219_OnetoManyRemoveCol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701222050242_OnetoManyAddCol.cs" />
+    <Compile Include="Migrations\201701222050242_OnetoManyAddCol.Designer.cs">
+      <DependentUpon>201701222050242_OnetoManyAddCol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701230806331_OnetoManyModelBehaviourConstructor.cs" />
+    <Compile Include="Migrations\201701230806331_OnetoManyModelBehaviourConstructor.Designer.cs">
+      <DependentUpon>201701230806331_OnetoManyModelBehaviourConstructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701230847325_OnetoManyModelSumProperty.cs" />
+    <Compile Include="Migrations\201701230847325_OnetoManyModelSumProperty.Designer.cs">
+      <DependentUpon>201701230847325_OnetoManyModelSumProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701230859286_OnetoManyModelNewProperty.cs" />
+    <Compile Include="Migrations\201701230859286_OnetoManyModelNewProperty.Designer.cs">
+      <DependentUpon>201701230859286_OnetoManyModelNewProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701230901029_OnetoManyModelremoveProperty.cs" />
+    <Compile Include="Migrations\201701230901029_OnetoManyModelremoveProperty.Designer.cs">
+      <DependentUpon>201701230901029_OnetoManyModelremoveProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701230907101_OnetoManyModelremoveProperty1.cs" />
+    <Compile Include="Migrations\201701230907101_OnetoManyModelremoveProperty1.Designer.cs">
+      <DependentUpon>201701230907101_OnetoManyModelremoveProperty1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701311852363_Addcascadedeltetochildtable.cs" />
+    <Compile Include="Migrations\201701311852363_Addcascadedeltetochildtable.Designer.cs">
+      <DependentUpon>201701311852363_Addcascadedeltetochildtable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201701222047176_OnetoMany.resx">
+      <DependentUpon>201701222047176_OnetoMany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701222049219_OnetoManyRemoveCol.resx">
+      <DependentUpon>201701222049219_OnetoManyRemoveCol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701222050242_OnetoManyAddCol.resx">
+      <DependentUpon>201701222050242_OnetoManyAddCol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701230806331_OnetoManyModelBehaviourConstructor.resx">
+      <DependentUpon>201701230806331_OnetoManyModelBehaviourConstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701230847325_OnetoManyModelSumProperty.resx">
+      <DependentUpon>201701230847325_OnetoManyModelSumProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701230859286_OnetoManyModelNewProperty.resx">
+      <DependentUpon>201701230859286_OnetoManyModelNewProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701230901029_OnetoManyModelremoveProperty.resx">
+      <DependentUpon>201701230901029_OnetoManyModelremoveProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701230907101_OnetoManyModelremoveProperty1.resx">
+      <DependentUpon>201701230907101_OnetoManyModelremoveProperty1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701311852363_Addcascadedeltetochildtable.resx">
+      <DependentUpon>201701311852363_Addcascadedeltetochildtable.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
