@@ -14,7 +14,7 @@ namespace ConsoleEF
             using (ClassLibrary.DomainContext dctx = new ClassLibrary.DomainContext())
             {
                 try
-                {
+                { 
                     //ClassLibrary.ProfileDet pd = new ClassLibrary.ProfileDet();
                     //pd.ItemName = "TEST";
                     //pd.ItemDescription = "";
